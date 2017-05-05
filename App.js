@@ -137,74 +137,6 @@ export default class App extends Component {
       <ScrollView contentContainerStyle={styles.container} scrollEnabled={this.state.scrollEnabled}>
         <Text style={styles.heading}>{"Victory Native"}</Text>
 
-        <Text style={styles.text}>{"VictoryBrushContainer"}</Text>
-        <VictoryChart
-          containerComponent={
-            <VictoryBrushContainer
-              onTouchStart={() => this.changeScroll(false)}
-              onTouchEnd={() => this.changeScroll(true)}
-              selectionStyle={{fill: "blue", fillOpacity: 0.1}}
-            />
-          }
-        >
-         <VictoryBar/>
-        </VictoryChart>
-
-        <Text style={styles.text}>{"VictorySelectionContainer"}</Text>
-        <VictoryChart
-          containerComponent={
-            <VictorySelectionContainer
-              onTouchStart={() => this.changeScroll(false)}
-              onTouchEnd={() => this.changeScroll(true)}
-            />
-          }
-        >
-          <VictoryScatter
-            data={this.state.staticRandomData}
-            style={{ data: {fill: (d, active) => active ? "tomato" : "gray"}}}
-          />
-        </VictoryChart>
-
-        <Text style={styles.text}>{"VictoryZoomContainer"}</Text>
-        <VictoryChart
-          containerComponent={
-            <VictoryZoomContainer
-              onTouchStart={() => this.changeScroll(false)}
-              onTouchEnd={() => this.changeScroll(true)}
-            />
-          }
-        >
-         <VictoryBar/>
-        </VictoryChart>
-
-        <Text style={styles.text}>{"VictoryVoronoiContainer"}</Text>
-        <VictoryChart
-          containerComponent={
-            <VictoryVoronoiContainer
-              onTouchStart={() => this.changeScroll(false)}
-              onTouchEnd={() => this.changeScroll(true)}
-              labels={(d) => `( ${d.x} , ${d.y} )`}
-            />
-          }
-        >
-         <VictoryLine data={this.state.staticRandomData} />
-        </VictoryChart>
-
-        <Text style={styles.text}>{'createContainer("zoom", "voronoi")'}</Text>
-
-        <VictoryChart
-          containerComponent={
-            <VictoryZoomVoronoiContainer
-              onTouchStart={() => this.changeScroll(false)}
-              onTouchEnd={() => this.changeScroll(true)}
-              labels={(d) => `( ${d.x} , ${d.y} )`}
-              dimension={"x"}
-            />
-          }
-        >
-         <VictoryScatter data={this.state.staticRandomData} />
-        </VictoryChart>
-
         <Text style={styles.text}>{"<VictoryPie/>"}</Text>
 
         <VictoryPie
@@ -846,6 +778,74 @@ export default class App extends Component {
               }
             ]}
           />
+        </VictoryChart>
+        
+        <Text style={styles.text}>{"VictoryBrushContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictoryBrushContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              selectionStyle={{fill: "blue", fillOpacity: 0.1}}
+            />
+          }
+        >
+         <VictoryBar/>
+        </VictoryChart>
+
+        <Text style={styles.text}>{"VictorySelectionContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictorySelectionContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+            />
+          }
+        >
+          <VictoryScatter
+            data={this.state.staticRandomData}
+            style={{ data: {fill: (d, active) => active ? "tomato" : "gray"}}}
+          />
+        </VictoryChart>
+
+        <Text style={styles.text}>{"VictoryZoomContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictoryZoomContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+            />
+          }
+        >
+         <VictoryBar/>
+        </VictoryChart>
+
+        <Text style={styles.text}>{"VictoryVoronoiContainer"}</Text>
+        <VictoryChart
+          containerComponent={
+            <VictoryVoronoiContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              labels={(d) => `( ${d.x} , ${d.y} )`}
+            />
+          }
+        >
+         <VictoryLine data={this.state.staticRandomData} />
+        </VictoryChart>
+
+        <Text style={styles.text}>{'createContainer("zoom", "voronoi")'}</Text>
+
+        <VictoryChart
+          containerComponent={
+            <VictoryZoomVoronoiContainer
+              onTouchStart={() => this.changeScroll(false)}
+              onTouchEnd={() => this.changeScroll(true)}
+              labels={(d) => `( ${d.x} , ${d.y} )`}
+              dimension={"x"}
+            />
+          }
+        >
+         <VictoryScatter data={this.state.staticRandomData} />
         </VictoryChart>
       </ScrollView>
     );
