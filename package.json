@@ -23,6 +23,6 @@
     "lodash": "^4.17.4",
     "react": "16.0.0-alpha.6",
     "react-native": "^0.43.4",
-    "victory-native": "^0.8.1"
+    "victory-native": "^0.8.2"
   }
 }
