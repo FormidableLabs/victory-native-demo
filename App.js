@@ -362,7 +362,7 @@ export default class App extends Component {
             {x: 5, y: 5}
           ]}
           interpolation="cardinal"
-          label="LINE"
+          labels="LINE"
           style={{
             data: {
               stroke: "#822722",
@@ -779,7 +779,7 @@ export default class App extends Component {
             ]}
           />
         </VictoryChart>
-        
+
         <Text style={styles.text}>{"VictoryBrushContainer"}</Text>
         <VictoryChart
           containerComponent={
