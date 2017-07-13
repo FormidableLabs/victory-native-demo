@@ -5644,9 +5644,9 @@ victory-core@^16.0.0, victory-core@^16.0.2:
     d3-timer "^1.0.0"
     lodash "^4.17.4"
 
-victory-native@^0.11.1:
-  version "0.11.1"
-  resolved "https://registry.yarnpkg.com/victory-native/-/victory-native-0.11.1.tgz#0aa38b4055661a246909753b4177decfa123eb57"
+victory-native@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/victory-native/-/victory-native-0.12.0.tgz#8eeaa4371bc3565cf3b86d38443fe1d7a86a2c75"
   dependencies:
     lodash "^4.17.4"
     prop-types "^15.5.10"
